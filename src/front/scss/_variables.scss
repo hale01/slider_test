@@ -1,0 +1,28 @@
+// Variables
+
+$screen-min: 320px;
+$screen-xs: 576px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1200px;
+
+$font-text: Roboto, Arial, sans-serif;
+$font-size-base: 14px;
+
+$color-black: #000;
+$color-white: white;
+
+$color-gray: #b8b6b6;
+$color-gray-dark:  #707070;
+$color-gray-darker: #535353;
+$color-gray-light: #d1d1d1;
+$color-gray-lighter: #e8e8e8;
+$color-main: $color-black;
+$color-text: $color-black;
+
+$indent-base: 20px;
+$indent-block: $indent-base*1.5;
+$margin-base: $indent-base;
+$margin-block: $margin-base*1.5;
+$margin-bottom-section: 50px;
+$transition-duration: 400ms;

@@ -1,0 +1,33 @@
+@use "sass:math";
+@import "reset";
+@import "rem";
+@import "variables";
+@import "functions";
+@import "loading";
+@import "elements";
+@import "header";
+@import "footer";
+@import "slider";
+
+[v-cloak] {
+  display: none;
+}
+.app {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: rem($screen-sm);
+    margin: math.div(rem($margin-base), 2) auto 0 auto;
+    padding: 0 rem(10px);
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+  }
+}

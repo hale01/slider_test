@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+
+cd front
+npm run-script watch

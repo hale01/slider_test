@@ -1,0 +1,41 @@
+@use "sass:math";
+
+.slider {
+  display: flex;
+  width: 100%;
+  flex: 1 0 auto;
+  margin-bottom: rem($margin-base);
+  overflow: hidden;
+  &__container {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    width: inherit;
+  }
+  &__body {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+  }
+  &__title {
+    margin-bottom: rem(10px);
+  }
+  &__description {
+    margin-top: math.div(rem($margin-base), 2);
+  }
+  &-controls {
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto rem($margin-base) auto;
+    @media (max-width: $screen-sm) {
+      width: 100%;
+    }
+    &__prev, &__next {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

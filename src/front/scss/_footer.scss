@@ -1,0 +1,7 @@
+@use "sass:math";
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: math.div(rem($margin-base), 2);
+}

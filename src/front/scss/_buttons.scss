@@ -1,0 +1,213 @@
+.btn {
+  height: rem(44px);
+  position: relative;
+  color: $color-white;
+  border-radius: rem(20px);
+  cursor: pointer;
+  padding: 0 rem(20px);
+  font-size: rem(16px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.0) inset, rem(1px) rem(2px) rem(6px) rem(1px) #bdbdbd;
+  transition: all $transition-duration;
+  min-width: rem(120px);
+  white-space: nowrap;
+  &:hover {
+    color: $color-white;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.0) inset, 0 0 rem(2px) 0 darken(#bdbdbd, 20%);
+  }
+  &:active {
+    box-shadow: rem(1px) rem(2px) rem(3px) darken($color-main, 12%) inset, 0 0 0 rgba(0, 0, 0, 0.0);
+  }
+  & a {
+    transition: all $transition-duration;
+    color: $color-white;
+  }
+  span {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  a {
+     display: flex;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+  }
+  &__spinner {
+    position: absolute;
+    width: 100%;
+    font-size: rem(20px);
+  }
+  &_default {
+    color: $color-text;
+    &:hover {
+      color: $color-text;
+    }
+  }
+  &_light-blue {
+    background: #00c2ff !important;
+    &:hover {
+      color: #00c2ff !important;
+      background: $color-white !important;
+    }
+  }
+  &_light-green {
+    background: #00e1ca !important;
+    &:hover {
+      color: #00e1ca !important;
+      background: $color-white !important;
+    }
+  }
+  &_primary {
+    color: $color-white;
+    background: $color-orange;
+    &:hover {
+      color: $color-white;
+    }
+    &_clicked {
+      box-shadow: rem(1px) rem(2px) rem(3px) darken($color-main, 12%) inset, 0 0 0 rgba(0, 0, 0, 0.0) !important;
+    }
+  }
+  &_secondary, &_link, &_blue {
+    color: $color-white;
+    background: $color-blue;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.0) inset, rem(1px) rem(2px) rem(6px) rem(1px) #bdbdbd;
+    &:hover {
+      color: $color-white;
+    }
+  }
+  &_cancel, &_delete {
+    background: $color-red;
+    color: $color-white;
+    &:hover {
+      color: $color-white;
+    }
+    &:focus, &:active {
+      border: 0;
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0.0) inset, 0 0 rem(2px) 0 darken(#bdbdbd, 20%);
+    }
+  }
+  &_gray {
+    background: $color-gray;
+    color: $color-white;
+  }
+  &_hidden {
+    visibility: hidden;
+  }
+  &_large {
+    font-size: rem(18px);
+    height: rem(55px);
+    width: 100%;
+    max-width: rem(235px);
+  }
+  &_small {
+    font-size: rem(14px);
+    height: rem(30px);
+    max-width: rem(300px);
+    min-width: auto;
+    padding: 0 rem(10px);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.0) inset, rem(1px) rem(1px) rem(4px) rem(1px) #bdbdbd;
+  }
+  &_disabled {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.0) inset, 0 0 rem(1px) 0 darken(#bdbdbd, 20%);
+    &:hover {
+      box-shadow: 0 0 0 rgba(0, 0, 0, 0.0) inset, 0 0 rem(1px) 0 darken(#bdbdbd, 20%);
+      cursor: default;
+    }
+  }
+}
+
+.btn_primary.btn_on-main-bg {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.0) inset, 1px 2px 4px #8e8a7e;
+  border: none;
+  &:hover {
+      background-color: $color-white;
+      color: $color-blue;
+      box-shadow: 0 0 3px darken(#8e8a7e, 15%) inset, 0 0 0 rgba(0, 0, 0, 0.0);
+    a {
+      color: $color-blue;
+    }
+  }
+}
+
+.btn_cancel.btn_disabled {
+  background: rgba($color-red, 0.65);
+  color: $color-white;
+}
+
+.btn_primary.btn_disabled {
+  background: rgba($color-second, 0.65);
+  color: $color-white;
+}
+
+.btn_secondary.btn_disabled {
+  background: rgba($color-blue, 0.65);
+  color: $color-white;
+  &:hover {
+    //box-shadow: 0 0 0 rgba(0, 0, 0, 0.0) inset, rem(1px) rem(1px) rem(4px) rem(1px) #bdbdbd;
+  }
+}
+
+.btn-group {
+  &_sides {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.b-pagination {
+  &__left {
+    margin-bottom: 10px;
+    font-size: 14px;
+    display: none;
+  }
+  &__right {
+    
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__item {
+    text-align: center;
+    margin-right: rem(6px);
+    &:last-child {
+      margin-right: 0;
+    }
+    & a {
+      display: inline-block;
+      font-size: rem(20px);
+      color: $color-dark;
+      vertical-align: middle;
+      &:hover {
+        color: $color-orange;
+        text-decoration: underline;
+      }
+      & svg {
+        display: block !important;
+        color: $color-blue;
+        font-size: rem(18px);
+        vertical-align: middle;
+      }
+    }
+    &_active {
+      & a {
+        color: $color-orange;
+        text-decoration: underline;
+      }
+    }
+    &_prev {
+      margin-right: rem(40px);
+    }
+    &_next {
+      margin-left: rem(40px);
+    }
+  }
+}

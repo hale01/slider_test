@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $font-text;
+  font-size: rem(16px);
+  scroll-behavior: smooth;
+  color: $color-text;
+  @media screen and (max-width: $screen-md) {
+    font-size: rem(15px);
+  }
+}
+
+body {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+h1, .h1 {
+  font-size: rem(26px);
+}
+
+h2, .h2 {
+  font-size: rem(24px);
+}
+
+h3, .h3 {
+  font-size: rem(20px);
+  font-weight: 500;
+  margin-bottom: rem(15px);
+}
+
+h4, .h4 {
+  font-size: rem(18px);
+}
+
+h5, .h5 {
+  font-size: rem(16px);
+}
+
+h6, .h6 {
+  font-size: rem(14px);
+}
+
+p {
+  margin-bottom: 0.625em;
+}

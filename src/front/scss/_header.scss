@@ -1,0 +1,18 @@
+@use "sass:math";
+
+.header {
+  margin-bottom: rem($margin-base);
+  border-bottom: rem(1px) solid $color-gray;
+  padding-bottom: math.div(rem($margin-base), 2);
+  &__title {
+    font-size: rem(24px);
+    text-align: center;
+    margin-bottom: rem(5px);
+  }
+  &__subtitle {
+    text-align: center;
+    font-size: rem(16px);
+    font-weight: bold;
+    color: $color-gray;
+  }
+}
