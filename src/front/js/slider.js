@@ -9,7 +9,6 @@ export class Slider {
         this.currentData = {};
         this.loadingClassName = 'loading';
 
-        this.elSlider = document.getElementsByClassName('slider')[0];
         this.elBody = document.getElementsByClassName('slider__body')[0];
         this.elNext = document.getElementsByClassName('slider-controls__next')[0];
         this.elPrev = document.getElementsByClassName('slider-controls__prev')[0];
@@ -23,7 +22,7 @@ export class Slider {
         if (currentId) {
             this.currentId = currentId;
         } else {
-            this.currentId = 0
+            this.currentId = 0;
         }
     }
 
@@ -56,12 +55,12 @@ export class Slider {
 
         try {
             if (this.currentId > 0) {
-                window.location.replace('#/slider/' + this.currentId)
+                window.location.replace('#/slider/' + this.currentId);
             } else {
-                window.location.replace('#/slider/')
+                window.location.replace('#/slider/');
             }
 
-            const response = await fetch(this.currentUrl, {cache: 'no-cache'})
+            const response = await fetch(this.currentUrl, {cache: 'no-cache'});
             if (response.ok) {
                 this.currentData = await response.json();
                 this.elImg.src = this.currentData.img;
@@ -69,29 +68,29 @@ export class Slider {
                 this.elDescription.textContent = this.currentData.alt;
             }
         } catch (error) {
-            console.log(error)
+            console.log(error);
         } finally {
             this.fetchProcess = false;
         }
     }
 
-    async prev() {
+    prev() {
         if (this.currentId > 0) {
-            this.currentId -= 1
+            this.currentId -= 1;
         }
     }
 
-     async next() {
-        this.currentId += 1
+     next() {
+        this.currentId += 1;
     }
 
     setEventListeners() {
-        this.elPrev.addEventListener('click', async () => {
-            await this.prev();
+        this.elPrev.addEventListener('click', () => {
+            this.prev();
         });
 
         this.elNext.addEventListener('click', async () => {
-            await this.next();
+            this.next();
         });
 
         this.elImg.addEventListener('load', async () => {
